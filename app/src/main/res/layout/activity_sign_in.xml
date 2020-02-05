@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity"
+    android:background="@drawable/gradient"
+
+    >
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_marginTop="@dimen/image_view_margin_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/tv_conn"
+        android:layout_marginTop="@dimen/text_view_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon"
+        android:text="CONN"
+        android:textSize="@dimen/connexton_text_size"
+        android:textColor="@color/colorGradient2"
+        app:layout_constraintLeft_toLeftOf="@id/tv_description"
+        app:layout_constraintRight_toLeftOf="@id/tv_exion"
+
+
+        ></TextView>
+
+    <TextView
+        android:id="@+id/tv_exion"
+        android:layout_marginTop="@dimen/text_view_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon"
+        android:text="EXION"
+        android:textSize="@dimen/connexton_text_size"
+        android:textColor="@color/colorButton"
+        app:layout_constraintLeft_toRightOf="@id/tv_conn"
+        app:layout_constraintRight_toRightOf="@id/tv_description"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/image_view_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon"
+        android:text="description"
+        android:textSize="@dimen/description_text_size"
+        android:textColor="@color/colorButton"
+        app:layout_constraintLeft_toLeftOf="@id/iv_icon"
+        app:layout_constraintRight_toRightOf="@id/iv_icon"
+        ></TextView>
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/colorButton"
+        app:layout_constraintBottom_toTopOf="@id/et_username"
+        app:layout_constraintLeft_toLeftOf="@id/iv_icon"
+        app:layout_constraintRight_toRightOf="@id/iv_icon"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_marginTop="@dimen/image_view_margin_top"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        app:layout_constraintLeft_toLeftOf="@id/et_password"
+        app:layout_constraintRight_toRightOf="@id/et_password"
+        app:layout_constraintBottom_toTopOf="@id/et_password"
+        android:layout_marginBottom="@dimen/regist_et_margin"
+        />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/button_margin_lr"
+        android:layout_marginLeft="@dimen/button_margin_lr"
+        android:layout_marginBottom="@dimen/sign_in_margin_bottom"
+        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    ​
+
+    ​
+
+    <TextView
+        android:id="@+id/et_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorButton"
+        android:text="Remeber Password "
+        app:layout_constraintRight_toRightOf="@id/btn_sign_in"
+        app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        android:layout_marginTop="@dimen/regist_et_margin"/>
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        app:layout_constraintRight_toLeftOf="@id/et_agree"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
+        app:layout_constraintTop_toBottomOf="@id/et_password"/>
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        style="@style/ButtonStyle"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/regist_et_margin"
+        android:text="Get Started"
+        app:layout_constraintLeft_toLeftOf="@id/et_password"
+        app:layout_constraintRight_toRightOf="@id/et_password"
+        app:layout_constraintTop_toBottomOf="@id/check" />
+
+    <Button
+        android:layout_marginTop="@dimen/regist_et_margin"
+        android:id="@+id/btn_face"
+        style="@style/SignInButtonStyle"
+        android:drawableTop="@drawable/facebook_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/btn_twitter"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_in"
+></Button>
+    <Button
+        android:layout_marginTop="@dimen/regist_et_margin"
+        android:id="@+id/btn_twitter"
+        style="@style/SignInButtonStyle"
+        android:drawableTop="@drawable/twitter_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/btn_face"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_in"
+        ></Button>
+
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_face"
+        android:layout_marginTop="@dimen/button_margin_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/colorButton"
+        >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Have not account? Sign up"
+        android:textColor="@color/colorButton"
+        >
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
